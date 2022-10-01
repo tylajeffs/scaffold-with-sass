@@ -10,14 +10,32 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="site">
     
-    <nav>
-      <%= link_to'View Packages', packages_path %>
+    
+    <div class="container">
       
-
-    </nav>
+      <div class="nav-column">
+        
+        <nav>
+          <%= link_to'View Packages', packages_path %> <br>
+          <%= link_to'Home', '/' %>
+        </nav>
+        
+      </div>
+      
+      <div class="item">
+        
+        <%= yield %>
+        
+      </div>
+      
+    </div>
     
-    <%= yield %>
+  
+    
+    
+    
+    
   </body>
 </html>

@@ -1,7 +1,83 @@
+:root {
+  --main-flower: #517bd6;
+  --nose: #ffc0cb;
+  --stem: #51d691;
+  --pot: #FF7043;
+  --pot-shadow: #d66f51;
+}
+
+
+html,body {
+    height: 100%;
+}
+
+.site {
+    background-color:#fcf5fa;
+}
+
 .flowerPackage {
-    border: thin solid blue;
+    border: thin solid black;
+    border-radius:10px;
+    background-color: #fcdcf0;
+    padding:20px;
     p {
         font-size: large;
     }
 }
 
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.nav-column {
+    width:10%;
+    height: 100%;
+    background-color:#cfb6c5;
+
+
+}
+
+.item {
+    width:90%;
+    height: 200 px;
+    padding: 20px;
+
+}
+
+.nav-column + .item {
+    margin-left: 2%;
+}
+
+.flower-row {
+    display:flex;
+}
+
+.flower {
+    width:10%;
+    height: 100%;
+    position: relative;
+    padding:5px;
+}
+
+.flower__head {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--main-flower);
+  margin-top: 50px;
+}
+
+.flower__head::after, .flower__head::before {
+  content: '';
+  position: absolute;
+  background: var(--main-flower);
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  transform: rotate(60deg);
+}
+
+.flower__head::before {
+  transform: rotate(-60deg);
+}
